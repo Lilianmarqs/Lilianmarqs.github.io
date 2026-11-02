@@ -9,29 +9,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--petroleo:#0d3d46;--agua:#1f8a8c;--papel:#f1f6f4;--tinta:#13292e;--ambar:#f4b63f;--nevoa:#c9dcd8;--suave:#4d6469}
+:root{--noite:#17152b;--violeta:#7446e8;--claro:#f5f3fa;--tinta:#17152b;--azul:#28a9e0;--lavanda:#b7a5f7;--suave:#4f4b66}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--papel);color:var(--tinta);font:400 1.125rem/1.6 "Source Sans 3",system-ui,sans-serif}
-a{color:var(--petroleo);text-underline-offset:.18em}
-a:focus-visible{outline:3px solid var(--ambar);outline-offset:3px;border-radius:2px}
+body{margin:0;background:var(--claro);color:var(--tinta);font:400 1.125rem/1.6 "Source Sans 3",system-ui,sans-serif}
+a{color:var(--noite);text-underline-offset:.18em}
+a:focus-visible{outline:3px solid var(--violeta);outline-offset:3px;border-radius:2px}
 h1,h2,h3{font-family:"Familjen Grotesk",system-ui,sans-serif;line-height:1.1;margin:0}
 .miolo{max-width:1080px;margin:0 auto;padding:0 28px}
-.topo{background:var(--petroleo);color:var(--papel);overflow:hidden}
-.topo a{color:var(--papel)}
+.topo{background:var(--noite);color:var(--claro);overflow:hidden}
+.topo a{color:var(--claro)}
 .nav{display:flex;justify-content:space-between;gap:20px;padding-top:24px;font-weight:600}
 .nav nav{display:flex;gap:20px}
 .abertura{padding:64px 0 28px;max-width:780px}
 h1{font-size:clamp(2.6rem,6.4vw,4.75rem);font-weight:700;letter-spacing:-.02em}
-.abertura p{font-size:1.3rem;margin:22px 0 0;max-width:640px;color:#dcebe7}
+.abertura p{font-size:1.3rem;margin:22px 0 0;max-width:640px;color:#ddd6f9}
 .grafo{display:block;width:100%;height:auto;margin:20px 0 0}
-.grafo text{font-family:"Familjen Grotesk",system-ui,sans-serif;fill:var(--papel);font-size:15px}
-.grafo .nota{fill:var(--nevoa);font-family:"Source Sans 3",system-ui,sans-serif;font-size:14px}
-.grafo rect{fill:#16505a;stroke:var(--agua);stroke-width:1.5}
-.grafo .destaque{fill:var(--ambar);stroke:var(--ambar)}
+.grafo text{font-family:"Familjen Grotesk",system-ui,sans-serif;fill:var(--claro);font-size:15px}
+.grafo .nota{fill:var(--lavanda);font-family:"Source Sans 3",system-ui,sans-serif;font-size:14px}
+.grafo rect{fill:#2a2650;stroke:var(--violeta);stroke-width:1.5}
+.grafo .destaque{fill:var(--azul);stroke:var(--azul)}
 .grafo .escuro{fill:var(--tinta);font-weight:700}
-.fio{fill:none;stroke:var(--ambar);stroke-width:2.5;stroke-dasharray:1;animation:liga 1.6s .25s ease-out backwards}
-.fio.calmo{stroke:var(--agua);stroke-width:1.5;animation-delay:.8s}
+.fio{fill:none;stroke:var(--azul);stroke-width:2.5;stroke-dasharray:1;animation:liga 1.6s .25s ease-out backwards}
+.fio.calmo{stroke:var(--lavanda);stroke-width:1.5;animation-delay:.8s}
 @keyframes liga{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fio{animation:none}}
 section{padding:72px 0 0}
@@ -41,27 +41,56 @@ h2{font-size:clamp(1.9rem,4vw,2.75rem);letter-spacing:-.01em}
 .tipo{margin:6px 0 16px;color:var(--suave);font-weight:600}
 .projeto img{width:100%;height:auto;display:block;border-radius:6px}
 .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.botao{display:inline-block;padding:11px 18px;border-radius:6px;background:var(--petroleo);color:var(--papel);font-weight:600;text-decoration:none}
-.botao:hover{background:#155764}
-.botao.chat{background:var(--ambar);color:var(--tinta)}
-.botao.chat:hover{background:#e7a722}
-.medida{margin-top:18px;padding-left:16px;border-left:4px solid var(--ambar)}
-.lista{margin:26px 0 0;padding:0;list-style:none;border-top:2px solid var(--petroleo)}
-.lista li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:28px;padding:24px 0;border-bottom:1px solid var(--nevoa)}
+.botao{display:inline-block;padding:11px 18px;border-radius:6px;background:var(--noite);color:var(--claro);font-weight:600;text-decoration:none}
+.botao:hover{background:#2a2650}
+.botao.chat{background:var(--azul);color:var(--tinta)}
+.botao.chat:hover{background:#55bde9}
+.medida{margin-top:18px;padding-left:16px;border-left:4px solid var(--azul)}
+.lista{margin:26px 0 0;padding:0;list-style:none;border-top:2px solid var(--noite)}
+.lista li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:28px;padding:24px 0;border-bottom:1px solid var(--lavanda)}
 .lista h3{font-size:1.25rem;line-height:1.25}
 .lista .tipo{margin:6px 0 0;font-size:1rem}
 .lista p{margin:0}
-.fim{margin-top:84px;background:var(--petroleo);color:var(--papel);padding:52px 0}
-.fim a{color:var(--papel)}
+.fim{margin-top:84px;background:var(--noite);color:var(--claro);padding:52px 0}
+.fim a{color:var(--claro)}
 .fim h2{font-size:2rem}
 .contatos{display:flex;flex-wrap:wrap;gap:22px;margin-top:18px;font-weight:600}
-.ingles{max-width:680px;color:#dcebe7;margin-top:30px}
+.ingles{max-width:680px;color:#ddd6f9;margin-top:30px}
 @media (max-width:760px){
  body{font-size:1.06rem}.miolo{padding:0 18px}.abertura{padding-top:44px}
  .projeto,.lista li{grid-template-columns:minmax(0,1fr);gap:14px}.projeto{gap:26px}
  .grafo.largo{display:none}.grafo.estreito{display:block}section{padding-top:56px}
 }
 @media (min-width:761px){.grafo.estreito{display:none}}
+
+button{font:inherit}
+.botao{border:0;cursor:pointer}
+button:focus-visible,textarea:focus-visible{outline:3px solid var(--violeta);outline-offset:2px}
+.titulo-botao{all:unset;cursor:pointer;font:inherit;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.16em}
+.titulo-botao:focus-visible{outline:3px solid var(--violeta);outline-offset:3px}
+.imagem-botao{padding:0;border:0;background:none;cursor:pointer;display:block;width:100%}
+.aviso-chat{font-size:1rem;color:var(--suave);margin-bottom:0}
+dialog{width:min(680px,calc(100vw - 32px));height:min(760px,calc(100dvh - 32px));padding:0;border:0;border-radius:10px;background:var(--claro);color:var(--tinta);box-shadow:0 18px 60px #17152b66}
+dialog[open]{display:flex;flex-direction:column}
+dialog::backdrop{background:#17152bb8}
+.chat-topo{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:18px 20px;background:var(--noite);color:var(--claro)}
+.chat-topo h2{font-size:1.35rem;letter-spacing:0}
+.chat-topo p{margin:4px 0 0;font-size:.98rem;color:#ddd6f9}
+.fechar:focus-visible{outline-color:var(--azul)}
+.fechar{background:none;color:var(--claro);border:1px solid #8e84c4;border-radius:6px;padding:5px 10px;cursor:pointer}
+.conversa{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px}
+.msg{max-width:88%;padding:10px 14px;border-radius:10px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.45}
+.msg.assistente{align-self:flex-start;background:#fff;border:1px solid var(--lavanda)}
+.msg.pessoa{align-self:flex-end;background:var(--noite);color:var(--claro)}
+.msg.espera{color:var(--suave)}
+.sugestoes{display:flex;flex-wrap:wrap;gap:8px;padding:0 20px 12px}
+.sugestoes[hidden]{display:none}
+.sugestoes button{background:#fff;color:var(--tinta);border:1px solid var(--violeta);border-radius:6px;padding:7px 11px;cursor:pointer;font-size:1rem}
+.sugestoes button:hover{background:#ece7fb}
+.enviar{display:flex;gap:10px;padding:14px 20px 18px;border-top:1px solid var(--lavanda)}
+.enviar textarea{flex:1;min-width:0;resize:none;height:48px;padding:11px 12px;border:1px solid #8e88a8;border-radius:6px;background:#fff;color:var(--tinta);font:inherit}
+.enviar .botao:disabled{opacity:.55;cursor:wait}
+@media (max-width:760px){dialog{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;border-radius:0}}
 </style>
 </head>
 <body>
@@ -100,19 +129,19 @@ h2{font-size:clamp(1.9rem,4vw,2.75rem);letter-spacing:-.01em}
 </header>
 <main class="miolo">
   <section id="projetos">
-    <h2>Projeto em destaque</h2>
+    <h2>Projeto para testar</h2>
     <div class="projeto">
       <div>
-        <h3>Assistente de gestão multiagente</h3>
+        <h3><button class="titulo-botao" type="button" data-abrir-chat>Assistente de gestão multiagente</button></h3>
         <p class="tipo">Projeto pessoal, com apoio de IA e dados públicos de exemplo</p>
-        <p>Um chat responde perguntas sobre vendas, pedidos, produtos e clientes da Northwind. Um orquestrador chama quatro especialistas, e as contas ficam em 13 tools de código.</p>
+        <p>Pergunte sobre vendas, pedidos, produtos e clientes da Northwind. Um orquestrador chama quatro especialistas, e as contas ficam em 13 tools de código.</p>
         <p class="medida">Em cinco rodadas de 30 perguntas, os acertos foram 29, 28, 29, 29 e 30. Só uma rodada ficou sem erro.</p>
         <div class="acoes">
-          <!-- CHAT_LINK -->
+          <button class="botao chat" type="button" data-abrir-chat>Testar o chat</button>
           <a class="botao" href="https://github.com/Lilianmarqs/multiagente-n8n-northwind">Ver o projeto no GitHub</a>
         </div>
       </div>
-      <img src="imagens/orquestrador.png" width="1049" height="603" alt="Fluxo no n8n com o orquestrador ligado à memória, ao modelo e aos quatro especialistas.">
+      <button class="imagem-botao" type="button" data-abrir-chat aria-label="Testar o chat do assistente de gestão"><img src="imagens/orquestrador.png" width="1049" height="603" alt="Fluxo no n8n com o orquestrador ligado à memória, ao modelo e aos quatro especialistas."></button>
     </div>
   </section>
   <section>
@@ -135,5 +164,92 @@ h2{font-size:clamp(1.9rem,4vw,2.75rem);letter-spacing:-.01em}
     <p class="ingles" lang="en">Process Automation Analyst working with AI agents, n8n, API integrations and data. The Northwind project is a personal demo built with AI assistance, using public sample data.</p>
   </div>
 </footer>
+<dialog id="chat" aria-labelledby="chat-titulo">
+  <div class="chat-topo">
+    <div><h2 id="chat-titulo">Assistente Northwind</h2><p>Dados públicos de exemplo, de 1996 a 1998. Até 15 perguntas por conversa.</p></div>
+    <button class="fechar" type="button" id="fechar-chat">Fechar</button>
+  </div>
+  <div class="conversa" id="conversa" role="log" aria-live="polite"></div>
+  <div class="sugestoes" id="sugestoes">
+    <button type="button">Quanto vendemos em abril de 1998?</button>
+    <button type="button">Quanto vale o estoque?</button>
+    <button type="button">Tem pedido atrasado?</button>
+  </div>
+  <form class="enviar" id="form-chat">
+    <textarea id="pergunta" maxlength="400" rows="1" placeholder="Escreva sua pergunta" aria-label="Sua pergunta"></textarea>
+    <button class="botao" type="submit" id="enviar">Enviar</button>
+  </form>
+</dialog>
+<script>
+(() => {
+  const ENDERECO = 'https://n8n.minervalabs.network/webhook/3cd12868-7a79-456f-906f-41e797999a4f/chat';
+  const dialogo = document.getElementById('chat');
+  const conversa = document.getElementById('conversa');
+  const sugestoes = document.getElementById('sugestoes');
+  const form = document.getElementById('form-chat');
+  const campo = document.getElementById('pergunta');
+  const enviar = document.getElementById('enviar');
+  const sessao = 'site-' + (crypto.randomUUID ? crypto.randomUUID() : Date.now() + '-' + Math.random().toString(36).slice(2));
+  let aguardando = false;
+
+  const mensagem = (texto, classe) => {
+    const bolha = document.createElement('div');
+    bolha.className = 'msg ' + classe;
+    bolha.textContent = texto;
+    conversa.append(bolha);
+    conversa.scrollTop = conversa.scrollHeight;
+    return bolha;
+  };
+
+  mensagem('Oi! Sou a assistente de gestão da Northwind Traders, uma empresa de exemplo. Pergunte sobre vendas, pedidos, produtos ou clientes. Não envie dados pessoais.', 'assistente');
+
+  const perguntar = async (texto) => {
+    const pergunta = texto.trim();
+    if (!pergunta || aguardando) return;
+    aguardando = true;
+    enviar.disabled = true;
+    sugestoes.hidden = true;
+    campo.value = '';
+    mensagem(pergunta, 'pessoa');
+    const espera = mensagem('Consultando os dados. Isso pode levar até um minuto.', 'assistente espera');
+    try {
+      const controle = new AbortController();
+      const prazo = setTimeout(() => controle.abort(), 120000);
+      const resposta = await fetch(ENDERECO, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'sendMessage', sessionId: sessao, chatInput: pergunta }),
+        signal: controle.signal
+      });
+      clearTimeout(prazo);
+      if (!resposta.ok) throw new Error('resposta ' + resposta.status);
+      const dados = await resposta.json();
+      const saida = Array.isArray(dados) ? dados[0]?.output : dados.output;
+      if (!saida) throw new Error('sem resposta');
+      espera.textContent = String(saida).replace(/\*\*/g, '');
+      espera.classList.remove('espera');
+    } catch {
+      espera.textContent = 'A demonstração não respondeu. Tente de novo em alguns minutos.';
+      espera.classList.remove('espera');
+    }
+    conversa.scrollTop = conversa.scrollHeight;
+    aguardando = false;
+    enviar.disabled = false;
+    campo.focus();
+  };
+
+  document.querySelectorAll('[data-abrir-chat]').forEach((b) => b.addEventListener('click', () => {
+    dialogo.showModal();
+    campo.focus();
+  }));
+  document.getElementById('fechar-chat').addEventListener('click', () => dialogo.close());
+  dialogo.addEventListener('click', (e) => { if (e.target === dialogo) dialogo.close(); });
+  form.addEventListener('submit', (e) => { e.preventDefault(); perguntar(campo.value); });
+  campo.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); perguntar(campo.value); }
+  });
+  sugestoes.querySelectorAll('button').forEach((b) => b.addEventListener('click', () => perguntar(b.textContent)));
+})();
+</script>
 </body>
 </html>
