@@ -2,253 +2,640 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lilian Marques | Automação e agentes de IA</title>
-<meta name="description" content="Portfólio de Lilian Marques, Analista de Automação e Processos: agentes de IA, n8n, integrações via API e dados.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lilian Marques</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Lilian Marques: inteligência artificial, automações e dados.">
+<meta property="og:title" content="Lilian Marques">
+<meta property="og:description" content="Inteligência Artificial, Automações e Dados.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237446E8'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3ELM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap">
+<script>
+  (() => {
+    try { const t = localStorage.getItem('tema'); if (t) document.documentElement.dataset.theme = t; } catch {}
+  })();
+</script>
 <style>
-:root{--noite:#17152b;--violeta:#7446e8;--claro:#f5f3fa;--tinta:#17152b;--azul:#28a9e0;--lavanda:#b7a5f7;--suave:#4f4b66}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--claro);color:var(--tinta);font:400 1.125rem/1.6 "Source Sans 3",system-ui,sans-serif}
-a{color:var(--noite);text-underline-offset:.18em}
-a:focus-visible{outline:3px solid var(--violeta);outline-offset:3px;border-radius:2px}
-h1,h2,h3{font-family:"Familjen Grotesk",system-ui,sans-serif;line-height:1.1;margin:0}
-.miolo{max-width:1080px;margin:0 auto;padding:0 28px}
-.topo{background:var(--noite);color:var(--claro);overflow:hidden}
-.topo a{color:var(--claro)}
-.nav{display:flex;justify-content:space-between;gap:20px;padding-top:24px;font-weight:600}
-.nav nav{display:flex;gap:20px}
-.abertura{padding:64px 0 28px;max-width:780px}
-h1{font-size:clamp(2.6rem,6.4vw,4.75rem);font-weight:700;letter-spacing:-.02em}
-.abertura p{font-size:1.3rem;margin:22px 0 0;max-width:640px;color:#ddd6f9}
-.grafo{display:block;width:100%;height:auto;margin:20px 0 0}
-.grafo text{font-family:"Familjen Grotesk",system-ui,sans-serif;fill:var(--claro);font-size:15px}
-.grafo .nota{fill:var(--lavanda);font-family:"Source Sans 3",system-ui,sans-serif;font-size:14px}
-.grafo rect{fill:#2a2650;stroke:var(--violeta);stroke-width:1.5}
-.grafo .destaque{fill:var(--azul);stroke:var(--azul)}
-.grafo .escuro{fill:var(--tinta);font-weight:700}
-.fio{fill:none;stroke:var(--azul);stroke-width:2.5;stroke-dasharray:1;animation:liga 1.6s .25s ease-out backwards}
-.fio.calmo{stroke:var(--lavanda);stroke-width:1.5;animation-delay:.8s}
-@keyframes liga{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fio{animation:none}}
-section{padding:72px 0 0}
-h2{font-size:clamp(1.9rem,4vw,2.75rem);letter-spacing:-.01em}
-.projeto{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:44px;align-items:start;margin-top:30px}
-.projeto h3{font-size:1.65rem}
-.tipo{margin:6px 0 16px;color:var(--suave);font-weight:600}
-.projeto img{width:100%;height:auto;display:block;border-radius:6px}
-.acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.botao{display:inline-block;padding:11px 18px;border-radius:6px;background:var(--noite);color:var(--claro);font-weight:600;text-decoration:none}
-.botao:hover{background:#2a2650}
-.botao.chat{background:var(--azul);color:var(--tinta)}
-.botao.chat:hover{background:#55bde9}
-.medida{margin-top:18px;padding-left:16px;border-left:4px solid var(--azul)}
-.lista{margin:26px 0 0;padding:0;list-style:none;border-top:2px solid var(--noite)}
-.lista li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:28px;padding:24px 0;border-bottom:1px solid var(--lavanda)}
-.lista h3{font-size:1.25rem;line-height:1.25}
-.lista .tipo{margin:6px 0 0;font-size:1rem}
-.lista p{margin:0}
-.fim{margin-top:84px;background:var(--noite);color:var(--claro);padding:52px 0}
-.fim a{color:var(--claro)}
-.fim h2{font-size:2rem}
-.contatos{display:flex;flex-wrap:wrap;gap:22px;margin-top:18px;font-weight:600}
-.ingles{max-width:680px;color:#ddd6f9;margin-top:30px}
-@media (max-width:760px){
- body{font-size:1.06rem}.miolo{padding:0 18px}.abertura{padding-top:44px}
- .projeto,.lista li{grid-template-columns:minmax(0,1fr);gap:14px}.projeto{gap:26px}
- .grafo.largo{display:none}.grafo.estreito{display:block}section{padding-top:56px}
-}
-@media (min-width:761px){.grafo.estreito{display:none}}
+  /* Layout: página de uma coluna larga; os projetos abrem por cima, com seta lateral. */
+  :root {
+    --bg: #F5F3FA; --surface: #FFFFFF; --ink: #17152B; --text: #45415B; --muted: #686480;
+    --line: #E2DDEF; --accent: #6A3CE0; --chip: #EDE9F9; --ativo: linear-gradient(110deg, #7446E8, #1C86BC);
+    --sombra: 0 14px 40px rgba(35, 28, 68, .08);
+    --retrato: linear-gradient(205deg, #3B2C8F 0%, #221C4C 45%, #17152B 100%);
+    --titulo: Manrope, system-ui, sans-serif; --corpo: "DM Sans", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #100E1E; --surface: #1A1830; --ink: #F3F1FA; --text: #CFCBDF; --muted: #A5A0BA;
+      --line: #2F2B49; --accent: #B7A5F7; --chip: #272345; --sombra: 0 14px 40px rgba(0, 0, 0, .3);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #100E1E; --surface: #1A1830; --ink: #F3F1FA; --text: #CFCBDF; --muted: #A5A0BA;
+    --line: #2F2B49; --accent: #B7A5F7; --chip: #272345; --sombra: 0 14px 40px rgba(0, 0, 0, .3);
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+  html.travado { overflow: hidden; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 400 1.03rem/1.65 var(--corpo); }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; }
+  button { font: inherit; color: inherit; }
+  h1, h2, h3 { margin: 0; color: var(--ink); font-family: var(--titulo); line-height: 1.12; letter-spacing: -.03em; text-wrap: balance; }
+  p, ul, ol { margin: 0; }
+  :focus-visible { outline: 3px solid #28A9E0; outline-offset: 3px; }
 
-button{font:inherit}
-.botao{border:0;cursor:pointer}
-button:focus-visible,textarea:focus-visible{outline:3px solid var(--violeta);outline-offset:2px}
-.titulo-botao{all:unset;cursor:pointer;font:inherit;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.16em}
-.titulo-botao:focus-visible{outline:3px solid var(--violeta);outline-offset:3px}
-.imagem-botao{padding:0;border:0;background:none;cursor:pointer;display:block;width:100%}
-.aviso-chat{font-size:1rem;color:var(--suave);margin-bottom:0}
-dialog{width:min(680px,calc(100vw - 32px));height:min(760px,calc(100dvh - 32px));padding:0;border:0;border-radius:10px;background:var(--claro);color:var(--tinta);box-shadow:0 18px 60px #17152b66}
-dialog[open]{display:flex;flex-direction:column}
-dialog::backdrop{background:#17152bb8}
-.chat-topo{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:18px 20px;background:var(--noite);color:var(--claro)}
-.chat-topo h2{font-size:1.35rem;letter-spacing:0}
-.chat-topo p{margin:4px 0 0;font-size:.98rem;color:#ddd6f9}
-.fechar:focus-visible{outline-color:var(--azul)}
-.fechar{background:none;color:var(--claro);border:1px solid #8e84c4;border-radius:6px;padding:5px 10px;cursor:pointer}
-.conversa{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px}
-.msg{max-width:88%;padding:10px 14px;border-radius:10px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.45}
-.msg.assistente{align-self:flex-start;background:#fff;border:1px solid var(--lavanda)}
-.msg.pessoa{align-self:flex-end;background:var(--noite);color:var(--claro)}
-.msg.espera{color:var(--suave)}
-.sugestoes{display:flex;flex-wrap:wrap;gap:8px;padding:0 20px 12px}
-.sugestoes[hidden]{display:none}
-.sugestoes button{background:#fff;color:var(--tinta);border:1px solid var(--violeta);border-radius:6px;padding:7px 11px;cursor:pointer;font-size:1rem}
-.sugestoes button:hover{background:#ece7fb}
-.enviar{display:flex;gap:10px;padding:14px 20px 18px;border-top:1px solid var(--lavanda)}
-.enviar textarea{flex:1;min-width:0;resize:none;height:48px;padding:11px 12px;border:1px solid #8e88a8;border-radius:6px;background:#fff;color:var(--tinta);font:inherit}
-.enviar .botao:disabled{opacity:.55;cursor:wait}
-@media (max-width:760px){dialog{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;border-radius:0}}
+  .faixa { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+  .miolo { width: 100%; max-width: 1080px; margin-inline: auto; }
+
+  /* Topo */
+  .topo { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+  .topo .miolo { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 66px; flex-wrap: wrap; padding-block: 10px; }
+  .marca { font: 800 1.02rem var(--titulo); letter-spacing: -.03em; color: var(--ink); text-decoration: none; }
+  .ajustes { display: flex; gap: 8px; }
+  .seg { display: inline-flex; padding: 3px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+  .seg button { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 4px 10px; border: 0; border-radius: 7px; background: none; color: var(--muted); font-size: .8rem; font-weight: 700; cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--chip); color: var(--ink); }
+  .seg svg { width: 15px; height: 15px; }
+
+  /* Abertura */
+  .abertura { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 380px); gap: clamp(32px, 6vw, 72px); align-items: center; padding-block: clamp(40px, 7vw, 84px); }
+  .abertura h1 { font-size: clamp(3rem, 8.4vw, 5.6rem); font-weight: 800; letter-spacing: -.045em; line-height: 1; }
+  .frentes { margin-top: 20px; color: var(--accent); font: 700 clamp(1.02rem, 2.1vw, 1.3rem)/1.4 var(--titulo); letter-spacing: -.01em; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+  .botao { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 10px 18px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface); color: var(--ink); font-weight: 700; font-size: .95rem; text-decoration: none; cursor: pointer; transition: border-color .2s, transform .2s; }
+  .botao:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .botao svg { width: 18px; height: 18px; flex: none; }
+  .botao.forte { border: 0; background: var(--ativo); color: #fff; }
+  .retrato { aspect-ratio: 4 / 5; border-radius: 24px; overflow: hidden; background: var(--retrato); }
+  .retrato img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+
+  /* Seções */
+  .secao { padding-block: clamp(44px, 7vw, 76px); border-top: 1px solid var(--line); }
+  .secao > .miolo > h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); }
+  .resumao { display: grid; gap: 14px; max-width: 68ch; margin-top: 20px; }
+  .blocos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 34px; margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--line); }
+  .bloco h3 { font-size: 1.04rem; letter-spacing: -.015em; }
+  .bloco ul { display: grid; gap: 13px; margin-top: 14px; padding: 0; list-style: none; }
+  .bloco strong { display: block; color: var(--ink); font-weight: 600; line-height: 1.35; }
+  .bloco span { color: var(--muted); font-size: .9rem; }
+  .fichas { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; list-style: none; }
+  .fichas li { padding: 3px 9px; border-radius: 7px; background: var(--chip); color: var(--ink); font-size: .8rem; font-weight: 600; }
+  .bloco ul.fichas { display: flex; gap: 6px; margin-top: 8px; }
+  .grupo + .grupo { margin-top: 14px; }
+
+  /* Projetos */
+  .areas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 24px; }
+  .area { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 104px; padding: 20px 22px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); text-align: left; cursor: pointer; transition: border-color .2s; }
+  .area:hover { border-color: var(--accent); }
+  .area b { display: block; color: var(--ink); font: 800 clamp(1.15rem, 2.6vw, 1.5rem)/1.2 var(--titulo); letter-spacing: -.025em; }
+  .area small { display: block; margin-top: 4px; color: var(--muted); font-size: .88rem; }
+  .area svg { width: 22px; height: 22px; flex: none; color: var(--muted); transition: transform .2s; }
+  .area[aria-expanded="true"] { border-color: transparent; background: var(--ativo); }
+  .area[aria-expanded="true"] b, .area[aria-expanded="true"] small, .area[aria-expanded="true"] svg { color: #fff; }
+  .area[aria-expanded="true"] svg { transform: rotate(180deg); }
+  .lista { display: grid; gap: 12px; margin-top: 14px; }
+  .item { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 18px; width: 100%; padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); color: var(--text); text-decoration: none; transition: border-color .2s, box-shadow .2s; }
+  .item:hover { border-color: var(--accent); box-shadow: var(--sombra); }
+  .item h3 { font-size: 1.28rem; }
+  .item p { margin-top: 7px; font-size: .96rem; }
+  .item .fichas { margin-top: 12px; }
+  .item > svg { width: 22px; height: 22px; color: var(--accent); }
+  .vazio { padding: 22px; border: 1px dashed var(--line); border-radius: 16px; color: var(--muted); }
+
+  /* Contato */
+  .contatos { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .contatos .botao { min-width: min(100%, 250px); justify-content: flex-start; overflow-wrap: anywhere; }
+  .rodape { padding-block: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+
+  /* Projeto aberto */
+  #projeto { position: fixed; inset: 0; width: 100%; max-width: none; height: 100%; height: 100dvh; max-height: none; margin: 0; padding: 0; border: 0; overflow-y: auto; background: var(--bg); color: var(--text); }
+  #projeto::backdrop { background: var(--bg); }
+  .det-topo { position: sticky; top: 0; z-index: 2; background: var(--bg); border-bottom: 1px solid var(--line); }
+  .det-topo .estreito { display: flex; align-items: center; gap: 10px; min-height: 64px; padding-top: env(safe-area-inset-top, 0px); }
+  .estreito, .det-corpo { width: 100%; max-width: 860px; margin-inline: auto; }
+  .voltar { min-height: 42px; padding: 8px 13px; font-size: .88rem; }
+  .contador { margin-left: auto; color: var(--muted); font-size: .88rem; font-variant-numeric: tabular-nums; }
+  .seta { display: grid; place-items: center; width: 42px; height: 42px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); color: var(--ink); cursor: pointer; transition: border-color .2s; }
+  .seta:hover:not(:disabled) { border-color: var(--accent); }
+  .seta:disabled { opacity: .35; cursor: default; }
+  .seta svg { width: 20px; height: 20px; }
+  .det-corpo { display: grid; gap: 40px; padding-block: 34px 70px; }
+  .det-cab h2 { margin-top: 8px; font-size: clamp(2rem, 5vw, 3.1rem); }
+  .tipo { color: var(--accent); font-size: .88rem; font-weight: 700; }
+  .det-cab p:not(.tipo) { margin-top: 14px; font-size: 1.12rem; max-width: 62ch; }
+  .det-cab .fichas { margin-top: 16px; }
+  .galeria { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .galeria a { display: block; text-decoration: none; }
+  .galeria a:first-child { grid-column: 1 / -1; }
+  .galeria img { width: 100%; border: 1px solid var(--line); border-radius: 12px; background: #161616; }
+  .galeria span { display: block; margin-top: 6px; color: var(--muted); font-size: .85rem; }
+  .bloco-det h3 { margin-bottom: 11px; font-size: 1.32rem; }
+  .bloco-det p { max-width: 68ch; }
+  .bloco-det ol { display: grid; gap: 8px; max-width: 68ch; padding-left: 22px; }
+  .nota { margin-top: 10px; color: var(--muted); font-size: .9rem; }
+  .fim { padding-top: 26px; border-top: 1px solid var(--line); }
+
+  /* Chat */
+  .chat { border: 1px solid var(--line); border-radius: 16px; background: var(--surface); overflow: hidden; }
+  .conversa { display: flex; flex-direction: column; gap: 10px; height: 330px; padding: 16px; overflow-y: auto; }
+  .msg { max-width: 88%; padding: 10px 13px; border-radius: 13px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .94rem; line-height: 1.5; }
+  .linha { display: flex; align-items: flex-start; gap: 8px; align-self: flex-start; max-width: 94%; min-width: 0; }
+  .linha .msg { max-width: 100%; min-width: 0; }
+  .robo { display: grid; place-items: center; flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--ativo); color: #fff; }
+  .robo svg { width: 21px; height: 21px; }
+  .msg.assistente { background: var(--chip); color: var(--ink); }
+  .msg.pessoa { align-self: flex-end; background: var(--ativo); color: #fff; }
+  .msg.espera { color: var(--muted); }
+  .sugestoes { display: flex; flex-wrap: wrap; gap: 7px; padding: 0 16px 12px; }
+  .sugestoes button { padding: 7px 10px; border: 1px solid var(--line); border-radius: 9px; background: none; color: var(--accent); font-size: .83rem; font-weight: 600; cursor: pointer; }
+  .enviar { display: flex; gap: 8px; padding: 12px; border-top: 1px solid var(--line); }
+  .enviar textarea { flex: 1; min-width: 0; height: 46px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); font: inherit; font-size: 1rem; resize: none; }
+  .enviar .botao:disabled { opacity: .55; cursor: wait; }
+
+  @media (min-width: 1100px) {
+    .seta { position: fixed; top: 50%; width: 56px; height: 56px; margin-top: -28px; box-shadow: var(--sombra); }
+    .seta svg { width: 24px; height: 24px; }
+    .seta.ant { left: max(28px, calc(50% - 530px - 28px)); }
+    .seta.prox { right: max(28px, calc(50% - 530px - 28px)); }
+  }
+  @media (max-width: 820px) {
+    .blocos { grid-template-columns: 1fr; gap: 28px; }
+  }
+  @media (max-width: 680px) {
+    .abertura { grid-template-columns: 1fr; }
+    .retrato { order: -1; width: min(100%, 300px); }
+    .areas { gap: 10px; }
+    .area { min-height: 88px; padding: 15px; }
+    .item { padding: 18px; gap: 12px; }
+    .seg button { padding: 4px 8px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
 </style>
 </head>
 <body>
-<header class="topo">
-  <div class="miolo">
-    <div class="nav"><span>Lilian Marques</span><nav aria-label="Principal"><a href="#projetos">Projetos</a><a href="#contato">Contato</a></nav></div>
-    <div class="abertura">
-      <h1>Automações e agentes de IA que trabalham com dados de verdade.</h1>
-      <p>Sou Analista de Automação e Processos. Crio fluxos em n8n, integro sistemas por API e confiro se os números estão certos.</p>
-    </div>
-    <svg class="grafo largo" viewBox="0 0 1024 246" role="img" aria-label="Uma pergunta entra no orquestrador, que chama o especialista em vendas, consulta a API e calcula a resposta em código.">
-      <path pathLength="1" class="fio" d="M212 92 C256 92 256 92 300 92"/>
-      <path pathLength="1" class="fio" d="M452 92 C490 92 490 40 528 40"/>
-      <path pathLength="1" class="fio calmo" d="M452 92 C490 92 490 92 528 92"/>
-      <path pathLength="1" class="fio calmo" d="M452 92 C490 92 490 144 528 144"/>
-      <path pathLength="1" class="fio calmo" d="M452 92 C490 92 490 196 528 196"/>
-      <path pathLength="1" class="fio" d="M668 40 C706 40 706 92 744 92"/>
-      <path pathLength="1" class="fio" d="M814 124 V234 H111 V204"/>
-      <rect x="10" y="60" width="202" height="64" rx="10"/><text x="26" y="88">Quanto vendemos</text><text x="26" y="109">em abril de 1998?</text>
-      <rect class="destaque" x="300" y="64" width="152" height="56" rx="10"/><text class="escuro" x="326" y="97">Orquestrador</text>
-      <rect x="528" y="18" width="140" height="44" rx="10"/><text x="598" y="45" text-anchor="middle">Vendas</text>
-      <rect x="528" y="72" width="140" height="44" rx="10"/><text x="598" y="99" text-anchor="middle">Pedidos</text>
-      <rect x="528" y="124" width="140" height="44" rx="10"/><text x="598" y="151" text-anchor="middle">Produtos</text>
-      <rect x="528" y="176" width="140" height="44" rx="10"/><text x="598" y="203" text-anchor="middle">Clientes</text>
-      <rect x="744" y="60" width="140" height="64" rx="10"/><text x="762" y="88">API + conta</text><text class="nota" x="762" y="108">em código</text>
-      <rect class="destaque" x="10" y="156" width="202" height="48" rx="10"/><text class="escuro" x="26" y="185">Resposta com o número</text>
-    </svg>
-    <svg class="grafo estreito" viewBox="0 0 340 300" role="img" aria-label="Uma pergunta passa pelo orquestrador, pelo especialista e pela conta em código até virar resposta.">
-      <path pathLength="1" class="fio" d="M170 52 V76"/><path pathLength="1" class="fio" d="M170 128 V152"/><path pathLength="1" class="fio" d="M170 204 V228"/>
-      <rect x="20" y="4" width="300" height="48" rx="10"/><text x="170" y="34" text-anchor="middle">Quanto vendemos em abril de 1998?</text>
-      <rect class="destaque" x="70" y="76" width="200" height="52" rx="10"/><text class="escuro" x="170" y="108" text-anchor="middle">Orquestrador</text>
-      <rect x="40" y="152" width="260" height="52" rx="10"/><text x="170" y="184" text-anchor="middle">Especialista + conta em código</text>
-      <rect class="destaque" x="50" y="228" width="240" height="52" rx="10"/><text class="escuro" x="170" y="260" text-anchor="middle">Resposta com o número</text>
-    </svg>
-  </div>
-</header>
-<main class="miolo">
-  <section id="projetos">
-    <h2>Projeto para testar</h2>
-    <div class="projeto">
-      <div>
-        <h3><button class="titulo-botao" type="button" data-abrir-chat>Assistente de gestão multiagente</button></h3>
-        <p class="tipo">Projeto pessoal, com apoio de IA e dados públicos de exemplo</p>
-        <p>Pergunte sobre vendas, pedidos, produtos e clientes da Northwind. Um orquestrador chama quatro especialistas, e as contas ficam em 13 tools de código.</p>
-        <p class="medida">Em cinco rodadas de 30 perguntas, os acertos foram 29, 28, 29, 29 e 30. Só uma rodada ficou sem erro.</p>
-        <div class="acoes">
-          <button class="botao chat" type="button" data-abrir-chat>Testar o chat</button>
-          <a class="botao" href="https://github.com/Lilianmarqs/multiagente-n8n-northwind">Ver o projeto no GitHub</a>
+  <header class="topo faixa">
+    <div class="miolo">
+      <a class="marca" href="#inicio">Lilian Marques</a>
+      <div class="ajustes">
+        <div class="seg" role="group" data-t-label="tema">
+          <button type="button" data-tema="light" data-t-label="claro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg></button>
+          <button type="button" data-tema="dark" data-t-label="escuro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></svg></button>
+        </div>
+        <div class="seg" role="group" data-t-label="idioma">
+          <button type="button" data-lingua="pt" lang="pt-BR">PT-BR</button>
+          <button type="button" data-lingua="en" lang="en">ENG</button>
         </div>
       </div>
-      <button class="imagem-botao" type="button" data-abrir-chat aria-label="Testar o chat do assistente de gestão"><img src="imagens/orquestrador.png" width="1049" height="603" alt="Fluxo no n8n com o orquestrador ligado à memória, ao modelo e aos quatro especialistas."></button>
     </div>
-  </section>
-  <section>
-    <h2>Outros trabalhos</h2>
-    <ul class="lista">
-      <li><div><h3>Agente de IA no WhatsApp</h3><p class="tipo">Experiência profissional, código privado</p></div><p>Desenvolvi de ponta a ponta um agente multiagente para donos de ótica consultarem vendas, ordens de serviço, financeiro e estoque. Reviso conversas reais e confiro as respostas no banco com SQL.</p></li>
-      <li><div><h3>BI de uma loja de seminovos</h3><p class="tipo">Freelance, código privado</p></div><p>Trato os dados em Python e pandas e mantenho o modelo em Power BI, com DRE, fluxo de caixa, vendas, leads e estoque. Confiro o fechamento mensal com o sistema de origem.</p></li>
-      <li><div><h3>Análise de saúde mental com SQL</h3><p class="tipo">Projeto de estudo</p></div><p>Consulta em PostgreSQL baseada em um caso do DataCamp. <a href="https://github.com/Lilianmarqs/projeto-saude-mental">Ver no GitHub</a></p></li>
-    </ul>
-  </section>
-</main>
-<footer class="fim" id="contato">
-  <div class="miolo">
-    <h2>Vamos conversar?</h2>
-    <div class="contatos">
-      <a href="https://www.linkedin.com/in/marqs-lilian/">LinkedIn</a>
-      <a href="https://github.com/Lilianmarqs">GitHub</a>
-      <a href="mailto:marques.lilian97@gmail.com">E-mail</a>
+  </header>
+
+  <main>
+    <section class="faixa" id="inicio">
+      <div class="miolo abertura">
+        <div>
+          <h1>Lilian Marques</h1>
+          <p class="frentes" data-t="frentes"></p>
+          <div class="links">
+            <a class="botao forte" href="https://github.com/Lilianmarqs" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .6 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.7-4.6 4.9.4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg>GitHub</a>
+            <a class="botao forte" href="https://www.linkedin.com/in/marqs-lilian/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.9 8.8H3.6V20h3.3V8.8ZM5.2 3.5a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8ZM20.4 13.6c0-3-1.6-5-4.2-5-1.3 0-2.4.6-3 1.6V8.8H10V20h3.3v-5.8c0-1.6.7-2.7 2-2.7s1.8 1 1.8 2.7V20h3.3v-6.4Z"/></svg>LinkedIn</a>
+          </div>
+        </div>
+        <div class="retrato"><img src="imagens/lilian.webp" width="800" height="1000" data-t-alt="foto"></div>
+      </div>
+    </section>
+
+    <section class="secao faixa" id="sobre">
+      <div class="miolo">
+        <h2 data-t="sobreTitulo"></h2>
+        <div class="resumao">
+          <p data-t="sobre1"></p>
+          <p data-t="sobre2"></p>
+          <p data-t="sobre3"></p>
+        </div>
+        <div class="blocos">
+          <div class="bloco">
+            <h3 data-t="atuacao"></h3>
+            <ul>
+              <li><strong data-t="cargo"></strong><span data-t="cargoLocal"></span></li>
+              <li><strong data-t="freela"></strong><span data-t="freelaLocal"></span></li>
+              <li><strong data-t="trofeu"></strong><span data-t="trofeuLocal"></span></li>
+            </ul>
+          </div>
+          <div class="bloco">
+            <h3 data-t="formacao"></h3>
+            <ul>
+              <li><strong data-t="pos"></strong><span>Una · 2025 – 2026</span></li>
+              <li><strong data-t="ads"></strong><span>Estácio · 2022 – 2024</span></li>
+            </ul>
+          </div>
+          <div class="bloco">
+            <h3 data-t="ferramentas"></h3>
+            <ul>
+              <li class="grupo"><span data-t="ferrIA"></span>
+                <ul class="fichas"><li>n8n</li><li>OpenAI</li><li>WhatsApp Cloud API</li><li>APIs REST</li><li>Webhooks</li><li>Apps Script</li><li>Claude Code</li></ul></li>
+              <li class="grupo"><span data-t="ferrDados"></span>
+                <ul class="fichas"><li>SQL</li><li>MySQL</li><li>Python</li><li>pandas</li><li>Power BI</li><li>DAX</li><li>Looker Studio</li></ul></li>
+              <li class="grupo"><span data-t="ferrOutras"></span>
+                <ul class="fichas"><li>Git</li><li>Postman</li><li>Pipedrive</li><li>RD Station</li></ul></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao faixa" id="projetos">
+      <div class="miolo">
+        <h2 data-t="projetos"></h2>
+        <div class="areas" id="areas"></div>
+        <div class="lista" id="lista" hidden></div>
+      </div>
+    </section>
+
+    <section class="secao faixa" id="contato">
+      <div class="miolo">
+        <h2 data-t="contato"></h2>
+        <div class="contatos">
+          <a class="botao forte" href="https://wa.me/5534997688019" target="_blank" rel="noopener noreferrer">WhatsApp · (34) 99768-8019</a>
+          <a class="botao forte" href="mailto:marques.lilian97@gmail.com">marques.lilian97@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape faixa"><div class="miolo">© <span id="ano"></span> Lilian Marques</div></footer>
+
+  <dialog id="projeto" aria-labelledby="det-titulo">
+    <div class="det-topo faixa">
+      <div class="estreito">
+        <button class="botao voltar" type="button" id="voltar" data-t="voltar"></button>
+        <span class="contador" id="contador"></span>
+        <button class="seta ant" type="button" id="anterior" data-t-label="anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+        <button class="seta prox" type="button" id="proximo" data-t-label="proximo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+      </div>
     </div>
-    <p class="ingles" lang="en">Process Automation Analyst working with AI agents, n8n, API integrations and data. The Northwind project is a personal demo built with AI assistance, using public sample data.</p>
-  </div>
-</footer>
-<dialog id="chat" aria-labelledby="chat-titulo">
-  <div class="chat-topo">
-    <div><h2 id="chat-titulo">Assistente Northwind</h2><p>Dados públicos de exemplo, de 1996 a 1998. Até 15 perguntas por conversa.</p></div>
-    <button class="fechar" type="button" id="fechar-chat">Fechar</button>
-  </div>
-  <div class="conversa" id="conversa" role="log" aria-live="polite"></div>
-  <div class="sugestoes" id="sugestoes">
-    <button type="button">Quanto vendemos em abril de 1998?</button>
-    <button type="button">Quanto vale o estoque?</button>
-    <button type="button">Tem pedido atrasado?</button>
-  </div>
-  <form class="enviar" id="form-chat">
-    <textarea id="pergunta" maxlength="400" rows="1" placeholder="Escreva sua pergunta" aria-label="Sua pergunta"></textarea>
-    <button class="botao" type="submit" id="enviar">Enviar</button>
-  </form>
-</dialog>
+    <div class="faixa"><div class="det-corpo" id="det-corpo"></div></div>
+  </dialog>
+
 <script>
 (() => {
   const ENDERECO = 'https://n8n.minervalabs.network/webhook/3cd12868-7a79-456f-906f-41e797999a4f/chat';
-  const dialogo = document.getElementById('chat');
-  const conversa = document.getElementById('conversa');
-  const sugestoes = document.getElementById('sugestoes');
-  const form = document.getElementById('form-chat');
-  const campo = document.getElementById('pergunta');
-  const enviar = document.getElementById('enviar');
-  const sessao = 'site-' + (crypto.randomUUID ? crypto.randomUUID() : Date.now() + '-' + Math.random().toString(36).slice(2));
-  let aguardando = false;
 
-  const mensagem = (texto, classe) => {
-    const bolha = document.createElement('div');
-    bolha.className = 'msg ' + classe;
-    bolha.textContent = texto;
-    conversa.append(bolha);
-    conversa.scrollTop = conversa.scrollHeight;
-    return bolha;
+  const T = {
+    pt: {
+      titulo: 'Lilian Marques | Inteligência Artificial, Automações e Dados',
+      tema: 'Tema', claro: 'Tema claro', escuro: 'Tema escuro', idioma: 'Idioma',
+      foto: 'Foto de Lilian Marques',
+      frentes: 'Inteligência Artificial · Automações · Dados',
+      sobreTitulo: 'Sobre mim',
+      sobre1: 'Sou Analista de Automação e Processos na Ipê Digital, empresa de software para óticas. Comecei na infraestrutura de TI, fui assumindo projetos de automação e dados, e esse trabalho virou meu cargo.',
+      sobre2: 'Construí em n8n um agente de IA no WhatsApp para donos de ótica consultarem vendas, ordens de serviço, financeiro e estoque. Também acompanho esse agente em produção: reviso conversas reais, confiro os números no banco com SQL e publico as correções. Para outras áreas da empresa, integro sistemas como Pipedrive, RD Station e Slack.',
+      sobre3: 'Como freelancer, cuido do BI mensal da Telescar, uma loja de seminovos: trato os dados em Python e monto o modelo e os dashboards em Power BI.',
+      atuacao: 'Atuação atual',
+      cargo: 'Analista de Automação e Processos I', cargoLocal: 'Ipê Digital · desde jun/2026',
+      freela: 'Analista de Dados (freelance)', freelaLocal: 'Telescar · desde mar/2026',
+      trofeu: 'Troféu Inovação 2026', trofeuLocal: 'Ipê Digital · automação do fluxo de admissão',
+      formacao: 'Formação',
+      pos: 'Pós-graduação em Ciência de Dados', ads: 'Análise e Desenvolvimento de Sistemas',
+      ferramentas: 'Ferramentas', ferrIA: 'Automação e IA', ferrDados: 'Dados', ferrOutras: 'Outras',
+      projetos: 'Projetos', contato: 'Contato', voltar: '← Voltar',
+      anterior: 'Projeto anterior', proximo: 'Próximo projeto',
+      dados: 'Dados', ia: 'Inteligência Artificial', projeto1: '1 projeto', projetoN: ' projetos', emBreve: 'Em breve',
+      vazio: 'Os projetos de dados entram aqui em breve.',
+      inspiracao: 'Inspiração', comoFunciona: 'Como funciona', resultado: 'Resultado', teste: 'Teste você',
+      github: 'Ver o projeto no GitHub',
+      chatOi: 'Oi! Sou a assistente de gestão da Northwind Traders, uma empresa de exemplo. Pergunte sobre vendas, pedidos, produtos ou clientes. Não envie dados pessoais.',
+      chatEspera: 'Consultando os dados. Isso pode levar até um minuto.',
+      chatErro: 'A demonstração não respondeu. Tente de novo em alguns minutos.',
+      chatCampo: 'Escreva sua pergunta', chatEnviar: 'Enviar',
+      chatNota: 'Dados públicos de exemplo, de 1996 a 1998. Até 15 perguntas por conversa. O assistente responde em português.'
+    },
+    en: {
+      titulo: 'Lilian Marques | Artificial Intelligence, Automation and Data',
+      tema: 'Theme', claro: 'Light theme', escuro: 'Dark theme', idioma: 'Language',
+      foto: 'Photo of Lilian Marques',
+      frentes: 'Artificial Intelligence · Automation · Data',
+      sobreTitulo: 'About me',
+      sobre1: 'I am a Process Automation Analyst at Ipê Digital, a software company for optical retailers. I started in IT infrastructure, took on automation and data projects along the way, and that work became my role.',
+      sobre2: 'I built a WhatsApp AI agent in n8n that lets optical store owners check sales, service orders, finance and inventory. I also run it in production: I review real conversations, check the numbers against the database with SQL and release fixes. For other teams, I connect systems such as Pipedrive, RD Station and Slack.',
+      sobre3: 'As a freelancer, I handle the monthly BI for Telescar, a used car dealership: data processing in Python, plus the model and dashboards in Power BI.',
+      atuacao: 'Current work',
+      cargo: 'Process Automation Analyst I', cargoLocal: 'Ipê Digital · since Jun 2026',
+      freela: 'Data Analyst (freelance)', freelaLocal: 'Telescar · since Mar 2026',
+      trofeu: 'Innovation Trophy 2026', trofeuLocal: 'Ipê Digital · employee admission automation',
+      formacao: 'Education',
+      pos: 'Postgraduate degree in Data Science', ads: 'Systems Analysis and Development',
+      ferramentas: 'Tools', ferrIA: 'Automation and AI', ferrDados: 'Data', ferrOutras: 'Other',
+      projetos: 'Projects', contato: 'Contact', voltar: '← Back',
+      anterior: 'Previous project', proximo: 'Next project',
+      dados: 'Data', ia: 'Artificial Intelligence', projeto1: '1 project', projetoN: ' projects', emBreve: 'Coming soon',
+      vazio: 'Data projects are coming soon.',
+      inspiracao: 'Inspiration', comoFunciona: 'How it works', resultado: 'Results', teste: 'Try it',
+      github: 'View the project on GitHub',
+      chatOi: 'Hi! I am the management assistant for Northwind Traders, a sample company. Ask about sales, orders, products or customers. Do not send personal data.',
+      chatEspera: 'Checking the data. This can take up to a minute.',
+      chatErro: 'The demo did not respond. Please try again in a few minutes.',
+      chatCampo: 'Type your question', chatEnviar: 'Send',
+      chatNota: 'Public sample data from 1996 to 1998. Up to 15 questions per conversation. The assistant answers in Portuguese.'
+    }
   };
 
-  mensagem('Oi! Sou a assistente de gestão da Northwind Traders, uma empresa de exemplo. Pergunte sobre vendas, pedidos, produtos ou clientes. Não envie dados pessoais.', 'assistente');
+  // Para incluir um projeto, copie um objeto desta lista e use area: 'dados' ou 'ia'.
+  const PROJETOS = [
+    {
+      id: 'northwind',
+      area: 'ia',
+      nome: { pt: 'Assistente de gestão multiagente', en: 'Multi-agent management assistant' },
+      tipo: { pt: 'Projeto pessoal, feito com apoio de IA', en: 'Personal project, built with AI assistance' },
+      resumo: {
+        pt: 'Chat que responde perguntas de gestão sobre vendas, pedidos, produtos e clientes, com dados públicos da Northwind.',
+        en: 'A chat that answers management questions about sales, orders, products and customers, using public Northwind data.'
+      },
+      ferramentas: ['n8n', 'OpenAI', 'JavaScript', 'API OData', 'pandas'],
+      imagens: [
+        { src: 'imagens/orquestrador.png', w: 1049, h: 603, nome: { pt: 'Orquestrador', en: 'Orchestrator' } },
+        { src: 'imagens/vendas.png', w: 1555, h: 663, nome: { pt: 'Especialista em vendas', en: 'Sales specialist' } },
+        { src: 'imagens/pedidos.png', w: 1397, h: 647, nome: { pt: 'Especialista em pedidos', en: 'Orders specialist' } },
+        { src: 'imagens/produtos.png', w: 1513, h: 683, nome: { pt: 'Especialista em produtos', en: 'Products specialist' } },
+        { src: 'imagens/clientes.png', w: 1439, h: 681, nome: { pt: 'Especialista em clientes', en: 'Customers specialist' } }
+      ],
+      inspiracao: {
+        pt: 'A ideia veio de um projeto real meu na Ipê Digital: um agente de IA no WhatsApp para donos de ótica consultarem os dados do próprio negócio. Como esse trabalho é privado, criei esta versão com dados públicos para mostrar a abordagem e deixar qualquer pessoa testar. Nada foi copiado dos fluxos da empresa.',
+        en: 'The idea came from a real project of mine at Ipê Digital: a WhatsApp AI agent that lets optical store owners check their own business data. That work is private, so I created this version with public data to show the approach and let anyone try it. Nothing was copied from the company\'s workflows.'
+      },
+      passos: {
+        pt: [
+          'O orquestrador identifica o assunto e o período da pergunta.',
+          'Ele chama um dos quatro especialistas: vendas, pedidos, produtos ou clientes.',
+          'O especialista busca os dados na API e percorre todas as páginas.',
+          'As contas ficam em 13 tools de código. O modelo escolhe a tool, mas não calcula o resultado.',
+          'O orquestrador monta a resposta com os números recebidos.'
+        ],
+        en: [
+          'The orchestrator identifies the topic and period of the question.',
+          'It calls one of four specialists: sales, orders, products or customers.',
+          'The specialist fetches the data from the API and goes through every page.',
+          'Calculations run in 13 code tools. The model picks the tool but does not calculate the result.',
+          'The orchestrator writes the answer with the numbers it received.'
+        ]
+      },
+      resultado: {
+        pt: 'Em cinco rodadas de 30 perguntas, conferidas com um gabarito independente em pandas, os acertos foram 29, 28, 29, 29 e 30. Só uma rodada ficou sem erro.',
+        en: 'Across five runs of 30 questions, checked against an independent answer key in pandas, the scores were 29, 28, 29, 29 and 30. Only one run had no errors.'
+      },
+      nota: { pt: 'Não é um sistema em produção.', en: 'This is not a production system.' },
+      chat: { sugestoes: ['Quanto vendemos em abril de 1998?', 'Quanto vale o estoque?', 'Tem pedido atrasado?'] },
+      github: 'https://github.com/Lilianmarqs/multiagente-n8n-northwind'
+    }
+  ];
 
-  const perguntar = async (texto) => {
-    const pergunta = texto.trim();
-    if (!pergunta || aguardando) return;
-    aguardando = true;
-    enviar.disabled = true;
-    sugestoes.hidden = true;
-    campo.value = '';
-    mensagem(pergunta, 'pessoa');
-    const espera = mensagem('Consultando os dados. Isso pode levar até um minuto.', 'assistente espera');
-    try {
+  const AREAS = ['dados', 'ia'];
+  const SETA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
+  const ROBO = '<span class="robo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5V7M2.5 12.5v3M21.5 12.5v3"/><rect x="5" y="7" width="14" height="12" rx="3.5"/><circle cx="9.5" cy="12.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="14.5" cy="12.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/></svg></span>';
+  const $ = (s) => document.querySelector(s);
+  const ler = (k) => { try { return localStorage.getItem(k); } catch { return null; } };
+  const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
+
+  const dialogo = $('#projeto');
+  const chats = {};
+  let lingua = ler('lingua') || ((navigator.language || 'pt').toLowerCase().startsWith('pt') ? 'pt' : 'en');
+  let areaAberta = null;
+  let atual = null;
+
+  const fichas = (lista) => `<ul class="fichas">${lista.map((f) => `<li>${f}</li>`).join('')}</ul>`;
+  const daArea = (area) => PROJETOS.filter((p) => p.area === area);
+
+  function pintarAreas() {
+    $('#areas').innerHTML = AREAS.map((a) => {
+      const n = daArea(a).length;
+      const conta = n === 0 ? T[lingua].emBreve : n === 1 ? T[lingua].projeto1 : n + T[lingua].projetoN;
+      return `<button class="area" type="button" data-area="${a}" aria-expanded="${areaAberta === a}" aria-controls="lista">
+        <span><b>${T[lingua][a]}</b><small>${conta}</small></span>${SETA}<path d="m5 9 7 7 7-7"/></svg></button>`;
+    }).join('');
+    const lista = $('#lista');
+    lista.hidden = !areaAberta;
+    if (!areaAberta) return;
+    const projetos = daArea(areaAberta);
+    lista.innerHTML = projetos.length ? projetos.map((p) => `
+      <a class="item" href="#projeto-${p.id}">
+        <div><h3>${p.nome[lingua]}</h3><p>${p.resumo[lingua]}</p>${fichas(p.ferramentas)}</div>
+        ${SETA}<path d="m9 5 7 7-7 7"/></svg>
+      </a>`).join('') : `<p class="vazio">${T[lingua].vazio}</p>`;
+  }
+
+  function criarChat(p) {
+    const el = document.createElement('div');
+    el.className = 'chat';
+    el.innerHTML = `<div class="conversa" role="log" aria-live="polite"></div>
+      <div class="sugestoes"></div>
+      <form class="enviar"><textarea maxlength="400" rows="1"></textarea><button class="botao forte" type="submit"></button></form>`;
+    const conversa = el.querySelector('.conversa');
+    const sugestoes = el.querySelector('.sugestoes');
+    const campo = el.querySelector('textarea');
+    const enviar = el.querySelector('button[type=submit]');
+    const sessao = 'site-' + (crypto.randomUUID ? crypto.randomUUID() : Date.now() + '-' + Math.random().toString(36).slice(2));
+    let aguardando = false;
+    let conversou = false;
+
+    const mensagem = (texto, classe) => {
+      const bolha = document.createElement('div');
+      bolha.className = 'msg ' + classe;
+      bolha.textContent = texto;
+      if (classe.startsWith('assistente')) {
+        const linha = document.createElement('div');
+        linha.className = 'linha';
+        linha.innerHTML = ROBO;
+        linha.append(bolha);
+        conversa.append(linha);
+      } else {
+        conversa.append(bolha);
+      }
+      conversa.scrollTop = conversa.scrollHeight;
+      return bolha;
+    };
+
+    const oi = mensagem('', 'assistente');
+    p.chat.sugestoes.forEach((s) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = s;
+      b.lang = 'pt-BR';
+      b.addEventListener('click', () => perguntar(s));
+      sugestoes.append(b);
+    });
+
+    async function perguntar(texto) {
+      const pergunta = texto.trim();
+      if (!pergunta || aguardando) return;
+      aguardando = true;
+      conversou = true;
+      enviar.disabled = true;
+      sugestoes.hidden = true;
+      campo.value = '';
+      mensagem(pergunta, 'pessoa');
+      const espera = mensagem(T[lingua].chatEspera, 'assistente espera');
       const controle = new AbortController();
       const prazo = setTimeout(() => controle.abort(), 120000);
-      const resposta = await fetch(ENDERECO, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action: 'sendMessage', sessionId: sessao, chatInput: pergunta }),
-        signal: controle.signal
-      });
+      try {
+        const resposta = await fetch(ENDERECO, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'sendMessage', sessionId: sessao, chatInput: pergunta }),
+          signal: controle.signal
+        });
+        if (!resposta.ok) throw new Error('resposta ' + resposta.status);
+        const dados = await resposta.json();
+        const saida = Array.isArray(dados) ? dados[0]?.output : dados.output;
+        if (!saida) throw new Error('sem resposta');
+        espera.textContent = String(saida).replace(/\*\*/g, '');
+      } catch {
+        espera.textContent = T[lingua].chatErro;
+      }
       clearTimeout(prazo);
-      if (!resposta.ok) throw new Error('resposta ' + resposta.status);
-      const dados = await resposta.json();
-      const saida = Array.isArray(dados) ? dados[0]?.output : dados.output;
-      if (!saida) throw new Error('sem resposta');
-      espera.textContent = String(saida).replace(/\*\*/g, '');
       espera.classList.remove('espera');
-    } catch {
-      espera.textContent = 'A demonstração não respondeu. Tente de novo em alguns minutos.';
-      espera.classList.remove('espera');
+      conversa.scrollTop = conversa.scrollHeight;
+      aguardando = false;
+      enviar.disabled = false;
+      campo.focus({ preventScroll: true });
     }
-    conversa.scrollTop = conversa.scrollHeight;
-    aguardando = false;
-    enviar.disabled = false;
-    campo.focus();
-  };
 
-  document.querySelectorAll('[data-abrir-chat]').forEach((b) => b.addEventListener('click', () => {
-    dialogo.showModal();
-    campo.focus();
-  }));
-  document.getElementById('fechar-chat').addEventListener('click', () => dialogo.close());
-  dialogo.addEventListener('click', (e) => { if (e.target === dialogo) dialogo.close(); });
-  form.addEventListener('submit', (e) => { e.preventDefault(); perguntar(campo.value); });
-  campo.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); perguntar(campo.value); }
+    el.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); perguntar(campo.value); });
+    campo.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); perguntar(campo.value); }
+    });
+
+    return {
+      el,
+      traduzir() {
+        if (!conversou) oi.textContent = T[lingua].chatOi;
+        campo.placeholder = T[lingua].chatCampo;
+        campo.setAttribute('aria-label', T[lingua].chatCampo);
+        enviar.textContent = T[lingua].chatEnviar;
+      }
+    };
+  }
+
+  function pintarProjeto() {
+    const p = PROJETOS.find((x) => x.id === atual);
+    if (!p) return;
+    const t = T[lingua];
+    const irmaos = daArea(p.area);
+    $('#contador').textContent = (irmaos.indexOf(p) + 1) + ' / ' + irmaos.length;
+    $('#anterior').disabled = $('#proximo').disabled = irmaos.length < 2;
+    $('#det-corpo').innerHTML = `
+      <header class="det-cab">
+        <p class="tipo">${p.tipo[lingua]}</p>
+        <h2 id="det-titulo">${p.nome[lingua]}</h2>
+        <p>${p.resumo[lingua]}</p>
+        ${fichas(p.ferramentas)}
+      </header>
+      <div class="galeria">${p.imagens.map((i) => `
+        <a href="${i.src}" target="_blank" rel="noopener noreferrer">
+          <img src="${i.src}" alt="${i.nome[lingua]}" width="${i.w}" height="${i.h}" loading="lazy">
+          <span>${i.nome[lingua]}</span>
+        </a>`).join('')}</div>
+      <section class="bloco-det"><h3>${t.inspiracao}</h3><p>${p.inspiracao[lingua]}</p></section>
+      <section class="bloco-det"><h3>${t.comoFunciona}</h3><ol>${p.passos[lingua].map((s) => `<li>${s}</li>`).join('')}</ol></section>
+      <section class="bloco-det"><h3>${t.resultado}</h3><p>${p.resultado[lingua]}</p><p class="nota">${p.nota[lingua]}</p></section>
+      ${p.chat ? `<section class="bloco-det"><h3>${t.teste}</h3><div id="vaga-chat"></div><p class="nota">${t.chatNota}</p></section>` : ''}
+      <div class="fim"><a class="botao forte" href="${p.github}" target="_blank" rel="noopener noreferrer">${t.github} ↗</a></div>`;
+    if (p.chat) {
+      chats[p.id] = chats[p.id] || criarChat(p);
+      chats[p.id].traduzir();
+      $('#vaga-chat').append(chats[p.id].el);
+    }
+  }
+
+  function traduzir() {
+    const t = T[lingua];
+    document.documentElement.lang = lingua === 'pt' ? 'pt-BR' : 'en';
+    document.title = t.titulo;
+    document.querySelectorAll('[data-t]').forEach((el) => { el.textContent = t[el.dataset.t]; });
+    document.querySelectorAll('[data-t-label]').forEach((el) => {
+      el.setAttribute('aria-label', t[el.dataset.tLabel]);
+      if (el.tagName === 'BUTTON') el.title = t[el.dataset.tLabel];
+    });
+    document.querySelectorAll('[data-t-alt]').forEach((el) => { el.alt = t[el.dataset.tAlt]; });
+    document.querySelectorAll('[data-lingua]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.lingua === lingua));
+    pintarAreas();
+    if (atual) pintarProjeto();
+  }
+
+  function marcarTema() {
+    const salvo = document.documentElement.dataset.theme;
+    const tema = salvo || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.querySelectorAll('[data-tema]').forEach((b) => b.setAttribute('aria-pressed', b.dataset.tema === tema));
+  }
+
+  function rotear() {
+    const id = location.hash.startsWith('#projeto-') ? location.hash.slice(9) : null;
+    const p = PROJETOS.find((x) => x.id === id);
+    if (!p) {
+      atual = null;
+      if (dialogo.open) dialogo.close();
+      document.documentElement.classList.remove('travado');
+      return;
+    }
+    atual = p.id;
+    if (areaAberta !== p.area) { areaAberta = p.area; pintarAreas(); }
+    pintarProjeto();
+    document.documentElement.classList.add('travado');
+    if (!dialogo.open) dialogo.showModal();
+    dialogo.scrollTop = 0;
+  }
+
+  function andar(passo) {
+    const irmaos = daArea(PROJETOS.find((x) => x.id === atual).area);
+    if (irmaos.length < 2) return;
+    const i = irmaos.findIndex((x) => x.id === atual);
+    location.hash = 'projeto-' + irmaos[(i + passo + irmaos.length) % irmaos.length].id;
+  }
+
+  const fechar = () => { location.hash = 'projetos'; };
+
+  $('#areas').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-area]');
+    if (!b) return;
+    areaAberta = areaAberta === b.dataset.area ? null : b.dataset.area;
+    pintarAreas();
+    $(`[data-area="${b.dataset.area}"]`).focus();
   });
-  sugestoes.querySelectorAll('button').forEach((b) => b.addEventListener('click', () => perguntar(b.textContent)));
+  $('#voltar').addEventListener('click', fechar);
+  $('#anterior').addEventListener('click', () => andar(-1));
+  $('#proximo').addEventListener('click', () => andar(1));
+  dialogo.addEventListener('cancel', (e) => { e.preventDefault(); fechar(); });
+  dialogo.addEventListener('keydown', (e) => {
+    if (e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'ArrowLeft') andar(-1);
+    if (e.key === 'ArrowRight') andar(1);
+  });
+  document.querySelectorAll('[data-tema]').forEach((b) => b.addEventListener('click', () => {
+    document.documentElement.dataset.theme = b.dataset.tema;
+    guardar('tema', b.dataset.tema);
+    marcarTema();
+  }));
+  document.querySelectorAll('[data-lingua]').forEach((b) => b.addEventListener('click', () => {
+    lingua = b.dataset.lingua;
+    guardar('lingua', lingua);
+    traduzir();
+  }));
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', marcarTema);
+  addEventListener('hashchange', rotear);
+
+  $('#ano').textContent = new Date().getFullYear();
+  marcarTema();
+  traduzir();
+  rotear();
 })();
 </script>
 </body>
