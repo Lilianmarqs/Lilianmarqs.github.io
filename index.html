@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lilian Marques | Automação e agentes de IA</title>
+<meta name="description" content="Portfólio de Lilian Marques, Analista de Automação e Processos: agentes de IA, n8n, integrações via API e dados.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--petroleo:#0d3d46;--agua:#1f8a8c;--papel:#f1f6f4;--tinta:#13292e;--ambar:#f4b63f;--nevoa:#c9dcd8;--suave:#4d6469}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--papel);color:var(--tinta);font:400 1.125rem/1.6 "Source Sans 3",system-ui,sans-serif}
+a{color:var(--petroleo);text-underline-offset:.18em}
+a:focus-visible{outline:3px solid var(--ambar);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:"Familjen Grotesk",system-ui,sans-serif;line-height:1.1;margin:0}
+.miolo{max-width:1080px;margin:0 auto;padding:0 28px}
+.topo{background:var(--petroleo);color:var(--papel);overflow:hidden}
+.topo a{color:var(--papel)}
+.nav{display:flex;justify-content:space-between;gap:20px;padding-top:24px;font-weight:600}
+.nav nav{display:flex;gap:20px}
+.abertura{padding:64px 0 28px;max-width:780px}
+h1{font-size:clamp(2.6rem,6.4vw,4.75rem);font-weight:700;letter-spacing:-.02em}
+.abertura p{font-size:1.3rem;margin:22px 0 0;max-width:640px;color:#dcebe7}
+.grafo{display:block;width:100%;height:auto;margin:20px 0 0}
+.grafo text{font-family:"Familjen Grotesk",system-ui,sans-serif;fill:var(--papel);font-size:15px}
+.grafo .nota{fill:var(--nevoa);font-family:"Source Sans 3",system-ui,sans-serif;font-size:14px}
+.grafo rect{fill:#16505a;stroke:var(--agua);stroke-width:1.5}
+.grafo .destaque{fill:var(--ambar);stroke:var(--ambar)}
+.grafo .escuro{fill:var(--tinta);font-weight:700}
+.fio{fill:none;stroke:var(--ambar);stroke-width:2.5;stroke-dasharray:1;animation:liga 1.6s .25s ease-out backwards}
+.fio.calmo{stroke:var(--agua);stroke-width:1.5;animation-delay:.8s}
+@keyframes liga{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fio{animation:none}}
+section{padding:72px 0 0}
+h2{font-size:clamp(1.9rem,4vw,2.75rem);letter-spacing:-.01em}
+.projeto{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:44px;align-items:start;margin-top:30px}
+.projeto h3{font-size:1.65rem}
+.tipo{margin:6px 0 16px;color:var(--suave);font-weight:600}
+.projeto img{width:100%;height:auto;display:block;border-radius:6px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.botao{display:inline-block;padding:11px 18px;border-radius:6px;background:var(--petroleo);color:var(--papel);font-weight:600;text-decoration:none}
+.botao:hover{background:#155764}
+.botao.chat{background:var(--ambar);color:var(--tinta)}
+.botao.chat:hover{background:#e7a722}
+.medida{margin-top:18px;padding-left:16px;border-left:4px solid var(--ambar)}
+.lista{margin:26px 0 0;padding:0;list-style:none;border-top:2px solid var(--petroleo)}
+.lista li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:28px;padding:24px 0;border-bottom:1px solid var(--nevoa)}
+.lista h3{font-size:1.25rem;line-height:1.25}
+.lista .tipo{margin:6px 0 0;font-size:1rem}
+.lista p{margin:0}
+.fim{margin-top:84px;background:var(--petroleo);color:var(--papel);padding:52px 0}
+.fim a{color:var(--papel)}
+.fim h2{font-size:2rem}
+.contatos{display:flex;flex-wrap:wrap;gap:22px;margin-top:18px;font-weight:600}
+.ingles{max-width:680px;color:#dcebe7;margin-top:30px}
+@media (max-width:760px){
+ body{font-size:1.06rem}.miolo{padding:0 18px}.abertura{padding-top:44px}
+ .projeto,.lista li{grid-template-columns:minmax(0,1fr);gap:14px}.projeto{gap:26px}
+ .grafo.largo{display:none}.grafo.estreito{display:block}section{padding-top:56px}
+}
+@media (min-width:761px){.grafo.estreito{display:none}}
+</style>
+</head>
+<body>
+<header class="topo">
+  <div class="miolo">
+    <div class="nav"><span>Lilian Marques</span><nav aria-label="Principal"><a href="#projetos">Projetos</a><a href="#contato">Contato</a></nav></div>
+    <div class="abertura">
+      <h1>Automações e agentes de IA que trabalham com dados de verdade.</h1>
+      <p>Sou Analista de Automação e Processos. Crio fluxos em n8n, integro sistemas por API e confiro se os números estão certos.</p>
+    </div>
+    <svg class="grafo largo" viewBox="0 0 1024 246" role="img" aria-label="Uma pergunta entra no orquestrador, que chama o especialista em vendas, consulta a API e calcula a resposta em código.">
+      <path pathLength="1" class="fio" d="M212 92 C256 92 256 92 300 92"/>
+      <path pathLength="1" class="fio" d="M452 92 C490 92 490 40 528 40"/>
+      <path pathLength="1" class="fio calmo" d="M452 92 C490 92 490 92 528 92"/>
+      <path pathLength="1" class="fio calmo" d="M452 92 C490 92 490 144 528 144"/>
+      <path pathLength="1" class="fio calmo" d="M452 92 C490 92 490 196 528 196"/>
+      <path pathLength="1" class="fio" d="M668 40 C706 40 706 92 744 92"/>
+      <path pathLength="1" class="fio" d="M814 124 V234 H111 V204"/>
+      <rect x="10" y="60" width="202" height="64" rx="10"/><text x="26" y="88">Quanto vendemos</text><text x="26" y="109">em abril de 1998?</text>
+      <rect class="destaque" x="300" y="64" width="152" height="56" rx="10"/><text class="escuro" x="326" y="97">Orquestrador</text>
+      <rect x="528" y="18" width="140" height="44" rx="10"/><text x="598" y="45" text-anchor="middle">Vendas</text>
+      <rect x="528" y="72" width="140" height="44" rx="10"/><text x="598" y="99" text-anchor="middle">Pedidos</text>
+      <rect x="528" y="124" width="140" height="44" rx="10"/><text x="598" y="151" text-anchor="middle">Produtos</text>
+      <rect x="528" y="176" width="140" height="44" rx="10"/><text x="598" y="203" text-anchor="middle">Clientes</text>
+      <rect x="744" y="60" width="140" height="64" rx="10"/><text x="762" y="88">API + conta</text><text class="nota" x="762" y="108">em código</text>
+      <rect class="destaque" x="10" y="156" width="202" height="48" rx="10"/><text class="escuro" x="26" y="185">Resposta com o número</text>
+    </svg>
+    <svg class="grafo estreito" viewBox="0 0 340 300" role="img" aria-label="Uma pergunta passa pelo orquestrador, pelo especialista e pela conta em código até virar resposta.">
+      <path pathLength="1" class="fio" d="M170 52 V76"/><path pathLength="1" class="fio" d="M170 128 V152"/><path pathLength="1" class="fio" d="M170 204 V228"/>
+      <rect x="20" y="4" width="300" height="48" rx="10"/><text x="170" y="34" text-anchor="middle">Quanto vendemos em abril de 1998?</text>
+      <rect class="destaque" x="70" y="76" width="200" height="52" rx="10"/><text class="escuro" x="170" y="108" text-anchor="middle">Orquestrador</text>
+      <rect x="40" y="152" width="260" height="52" rx="10"/><text x="170" y="184" text-anchor="middle">Especialista + conta em código</text>
+      <rect class="destaque" x="50" y="228" width="240" height="52" rx="10"/><text class="escuro" x="170" y="260" text-anchor="middle">Resposta com o número</text>
+    </svg>
+  </div>
+</header>
+<main class="miolo">
+  <section id="projetos">
+    <h2>Projeto em destaque</h2>
+    <div class="projeto">
+      <div>
+        <h3>Assistente de gestão multiagente</h3>
+        <p class="tipo">Projeto pessoal, com apoio de IA e dados públicos de exemplo</p>
+        <p>Um chat responde perguntas sobre vendas, pedidos, produtos e clientes da Northwind. Um orquestrador chama quatro especialistas, e as contas ficam em 13 tools de código.</p>
+        <p class="medida">Em cinco rodadas de 30 perguntas, os acertos foram 29, 28, 29, 29 e 30. Só uma rodada ficou sem erro.</p>
+        <div class="acoes">
+          <!-- CHAT_LINK -->
+          <a class="botao" href="https://github.com/Lilianmarqs/multiagente-n8n-northwind">Ver o projeto no GitHub</a>
+        </div>
+      </div>
+      <img src="imagens/orquestrador.png" width="1049" height="603" alt="Fluxo no n8n com o orquestrador ligado à memória, ao modelo e aos quatro especialistas.">
+    </div>
+  </section>
+  <section>
+    <h2>Outros trabalhos</h2>
+    <ul class="lista">
+      <li><div><h3>Agente de IA no WhatsApp</h3><p class="tipo">Experiência profissional, código privado</p></div><p>Desenvolvi de ponta a ponta um agente multiagente para donos de ótica consultarem vendas, ordens de serviço, financeiro e estoque. Reviso conversas reais e confiro as respostas no banco com SQL.</p></li>
+      <li><div><h3>BI de uma loja de seminovos</h3><p class="tipo">Freelance, código privado</p></div><p>Trato os dados em Python e pandas e mantenho o modelo em Power BI, com DRE, fluxo de caixa, vendas, leads e estoque. Confiro o fechamento mensal com o sistema de origem.</p></li>
+      <li><div><h3>Análise de saúde mental com SQL</h3><p class="tipo">Projeto de estudo</p></div><p>Consulta em PostgreSQL baseada em um caso do DataCamp. <a href="https://github.com/Lilianmarqs/projeto-saude-mental">Ver no GitHub</a></p></li>
+    </ul>
+  </section>
+</main>
+<footer class="fim" id="contato">
+  <div class="miolo">
+    <h2>Vamos conversar?</h2>
+    <div class="contatos">
+      <a href="https://www.linkedin.com/in/marqs-lilian/">LinkedIn</a>
+      <a href="https://github.com/Lilianmarqs">GitHub</a>
+      <a href="mailto:marques.lilian97@gmail.com">E-mail</a>
+    </div>
+    <p class="ingles" lang="en">Process Automation Analyst working with AI agents, n8n, API integrations and data. The Northwind project is a personal demo built with AI assistance, using public sample data.</p>
+  </div>
+</footer>
+</body>
+</html>
