@@ -403,7 +403,15 @@
   const SETA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
   const ROBO = '<span class="robo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5V7M2.5 12.5v3M21.5 12.5v3"/><rect x="5" y="7" width="14" height="12" rx="3.5"/><circle cx="9.5" cy="12.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="14.5" cy="12.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="3" r="1" fill="currentColor" stroke="none"/></svg></span>';
   const $ = (s) => document.querySelector(s);
-  const contar = (nome) => window.goatcounter?.count?.({ path: nome, title: nome, event: true });
+  // Eventos disparados antes de o GoatCounter carregar (ex.: link direto para #projeto-...) ficam na fila
+  // e são enviados no evento load, que só ocorre depois que o script async do GoatCounter executou.
+  const filaEventos = [];
+  const enviar = (ev) => window.goatcounter?.count?.(ev);
+  const contar = (nome) => {
+    const ev = { path: nome, title: nome, event: true };
+    if (window.goatcounter?.count) enviar(ev); else filaEventos.push(ev);
+  };
+  addEventListener('load', () => filaEventos.splice(0).forEach(enviar));
   const ler = (k) => { try { return localStorage.getItem(k); } catch { return null; } };
   const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch {} };
 
